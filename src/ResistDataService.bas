@@ -98,14 +98,7 @@ End Sub
 
 Public Sub registData()
 ' データを登録する
-    ' メッセージの表示
-    Dim response As Integer
-    response = MsgBox("データを登録します。よろしいでしょうか？", vbYesNo + vbDefaultButton2, "データ登録")
-    
-    If response <> 6 Then
-        End
-    End If
-    
+'
     ' 入力データの形成
     Dim iData As inputData: Set iData = createInputData
     
