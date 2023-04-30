@@ -50,9 +50,42 @@ Public Function findWholeMatch(r As Range, target As Variant) As Range
     
 End Function
 
-Public Sub setWindowSizeWithRegistData()
-' Windowサイズの調整
+Public Sub goToRegistDataSheet()
+' データ登録シートへ移動
+    Application.ScreenUpdating = False
+    
+    ' シート選択
+    selectSheet (REGIST_DATA)
+    ' ウィンドウサイズの調整
     Application.WindowState = xlNormal
     ActiveWindow.Width = 430
     ActiveWindow.Height = 720
+
+    Application.ScreenUpdating = True
+End Sub
+
+Public Sub goToDataSheet()
+' データシートへ移動
+'
+    Application.ScreenUpdating = False
+    
+    ' シート選択
+    selectSheet (DATA)
+    ' ウィンドウサイズの調整
+    Application.WindowState = xlMaximized
+
+    Application.ScreenUpdating = True
+End Sub
+
+Public Sub goToGraphSheet()
+' グラフシートへ移動
+'
+    Application.ScreenUpdating = False
+    
+    ' シート選択
+    selectSheet (GRAPH)
+    ' ウィンドウサイズの調整
+    Application.WindowState = xlMaximized
+
+    Application.ScreenUpdating = True
 End Sub
