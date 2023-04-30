@@ -49,3 +49,10 @@ Public Function findWholeMatch(r As Range, target As Variant) As Range
     Set findWholeMatch = r.Find(target, LookAt:=xlWhole, MatchCase:=True)
     
 End Function
+
+Public Sub setWindowSizeWithRegistData()
+' WindowÉTÉCÉYÇÃí≤êÆ
+    Application.WindowState = xlNormal
+    ActiveWindow.Width = 430
+    ActiveWindow.Height = 720
+End Sub
