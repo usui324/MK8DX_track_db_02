@@ -163,5 +163,5 @@ Public Sub deleteData()
         End
     End If
     
-    Sheets(DATA).Range(Cells(2, 1), Cells(getLastRowNo, DATA_COLS)).Clear
+    Sheets(DATA).Range(Cells(2, 1), Cells(getLastRowNo, DATA_COLS)).ClearContents
 End Sub
