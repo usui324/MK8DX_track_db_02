@@ -1,0 +1,36 @@
+000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
+000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
+000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
+000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
+000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
+000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
+000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
+000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル
+000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
+000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
+000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
+000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
+000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
+000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
+000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
+000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル
+000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
+000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
+000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
+000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
+000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
+000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
+000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
+000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
+000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
+000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル

@@ -36,4 +36,63 @@ Public Function getLastRowNo() As Long
     getLastRowNo = lastRowCell.Row
 End Function
 
+Public Sub exportData()
+' データをエクスポートする
+'
+     ' エクスポートファイルを指定
+    ChDir ThisWorkbook.Path
+    Dim saveFileName As String
+    saveFileName = Application.GetSaveAsFilename(InitialFileName:="mogiData.txt", filefilter:="模擬データ,*.txt")
+
+    ' キャンセル処理
+    If saveFileName = "False" Then
+        Exit Sub
+    End If
+    
+    ' 出力する対象シート
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets(DATA)
+
+    ' ファイルに書き込み
+    Open saveFileName For Output As #1
+    
+    Dim i As Long
+    For i = 2 To getLastRowNo
+        Print #1, printLine(ws, i)
+    Next i
+    
+    Close #1
+    
+    Call openMsgBox(saveFileName & "にデータを出力しました", , vbInformation)
+
+End Sub
+
+Function printLine(ws As Worksheet, rowNo As Long) As String
+' ファイル出力する一行の文字列を返す
+'
+    Dim i As Integer
+    printLine = ws.Cells(rowNo, 1).Value
+    For i = 2 To DATA_COLS
+        printLine = printLine & "," & ws.Cells(rowNo, i).Value
+    Next i
+    
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

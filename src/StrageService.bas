@@ -141,7 +141,7 @@ Public Function getRegistKey() As String
 '
     ' ’l‚ğæ“¾
     Dim key As Long: key = Sheets(STORAGE).Cells(1, STORAGE_COL_REGIST_KEY).Value
-    Dim resultStr As String: resultStr = Replace(Str(key), " ", "")
+    Dim resultStr As String: resultStr = Replace(str(key), " ", "")
     Dim resultLength As Integer: resultLength = Len(resultStr)
     
     ' ƒGƒ‰[ˆ—

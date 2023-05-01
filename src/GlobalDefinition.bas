@@ -6,6 +6,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const RACE_NUM = 12
     ' シート保護パスワード
     Public Const PROTECT_PASSWORD = "MK8DX"
+    ' データカラム数
+    Public Const DATA_COLS = 11
 
 ' シート名
     Public Const REGIST_DATA = "RegistData"
