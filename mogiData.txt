@@ -1,36 +1,48 @@
-000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
-000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
-000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
-000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
-000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
-000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
-000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
-000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル
-000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
-000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
-000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
-000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
-000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
-000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
-000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
-000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル
-000014,2023/05/01,tier-X,FFA,MKS,マリオカートスタジアム,Mario Kart Stadium,1,1,15,サンプル
-000014,2023/05/01,tier-X,FFA,WP,ウォーターパーク,Water Park,1,2,12,サンプル
-000014,2023/05/01,tier-X,FFA,SSC,スイーツキャニオン,Sweet Sweet Canyon,2,3,10,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,3,4,9,サンプル
-000014,2023/05/01,tier-X,FFA,TR,ドッスンいせき,Thwomp Ruins,4,5,8,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,5,6,7,サンプル
-000014,2023/05/01,tier-X,FFA,TH,キノピオハーバー,Toad Harbor,6,7,6,サンプル
-000014,2023/05/01,tier-X,FFA,bCMo,N64 チョコマウンテン,N64 Choco Mountain,7,8,5,サンプル
-000014,2023/05/01,tier-X,FFA,dWGM,Wii ワリオこうざん,Wii Wario's Gold Mine,8,9,4,サンプル
-000014,2023/05/01,tier-X,FFA,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,9,10,3,サンプル
-000014,2023/05/01,tier-X,FFA,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,10,11,2,サンプル
-000014,2023/05/01,tier-X,FFA,MC,マリオサーキット,Mario Circuit,11,12,1,サンプル
+000014,2023/04/26,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,11,1,15,打開 回避
+000014,2023/04/26,tier-D,2v2,SA,サンシャインくうこう,Sunshine Airport,1,1,15,前
+000014,2023/04/26,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,1,8,5,
+000014,2023/04/26,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,8,4,9,前
+000014,2023/04/26,tier-D,2v2,bSL,GBA スノーランド,GBA Snow Land,4,7,6,打開
+000014,2023/04/26,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,7,3,10,前
+000014,2023/04/26,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,3,4,9,前
+000014,2023/04/26,tier-D,2v2,dRiR,GBA リボンロード,GBA Ribbon Road,4,8,5,前
+000014,2023/04/26,tier-D,2v2,Ed,エレクトロドリーム,Electrodrome,8,3,10,打開
+000014,2023/04/26,tier-D,2v2,rDP3,SFC ドーナツへいや3,SNES Donut Plains 3,3,10,3,前
+000014,2023/04/26,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,10,9,4,前
+000014,2023/04/26,tier-D,2v2,rMP,3DS ミュージックパーク,3DS Music Park,9,6,7,打開 サンダー
+000015,2023/04/27,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,1,1,15,前
+000015,2023/04/27,tier-D,2v2,rGV,Wii グラグラかざん,Wii Grumble Volcano,1,2,12,
+000015,2023/04/27,tier-D,2v2,SA,サンシャインくうこう,Sunshine Airport,2,6,7,前
+000015,2023/04/27,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,6,12,1,打開 サンダー
+000015,2023/04/27,tier-D,2v2,bNH,Tour ニンニンドージョー,Tour Ninja Hideaway,12,5,8,
+000015,2023/04/27,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,5,9,4,
+000015,2023/04/27,tier-D,2v2,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,9,1,15,前
+000015,2023/04/27,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,1,11,2,打開
+000015,2023/04/27,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,11,2,12,打開 回避
+000015,2023/04/27,tier-D,2v2,dRiR,GBA リボンロード,GBA Ribbon Road,2,1,15,打開
+000015,2023/04/27,tier-D,2v2,Ed,エレクトロドリーム,Electrodrome,1,11,2,
+000015,2023/04/27,tier-D,2v2,bTC,3DS キノピオサーキット,3DS Toad Circuit,11,7,6,
+000016,2023/04/28,tier-D,2v2,bBL,GBA テレサレイク,GBA Boo Lake,1,4,9,前
+000016,2023/04/28,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,4,1,15,打開　回避
+000016,2023/04/28,tier-D,2v2,bCMa,Wii ココナッツモール,Wii Coconut Mall,1,1,15,前
+000016,2023/04/28,tier-D,2v2,Ed,エレクトロドリーム,Electrodrome,1,9,4,前
+000016,2023/04/28,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,9,3,10,打開　回避
+000016,2023/04/28,tier-D,2v2,WP,ウォーターパーク,Water Park,3,1,15,前
+000016,2023/04/28,tier-D,2v2,SA,サンシャインくうこう,Sunshine Airport,1,9,4,前
+000016,2023/04/28,tier-D,2v2,bBB,Tour ベルリンシュトラーセ,Tour Berlin Byways,9,1,15,前
+000016,2023/04/28,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,1,11,2,前
+000016,2023/04/28,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,11,8,5,打開
+000016,2023/04/28,tier-D,2v2,rMP,3DS ミュージックパーク,3DS Music Park,8,8,5,前
+000016,2023/04/28,tier-D,2v2,dHC,ハイラルサーキット,Hyrule Circuit,8,1,15,打開　回避
+000017,2023/05/01,tier-D,2v2,bDS,Wii DKスノーボードクロス,Wii DK Summit,6,5,8,打開
+000017,2023/05/01,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,5,2,12,打開
+000017,2023/05/01,tier-D,2v2,rRRd,N64 レインボーロード,N64 Rainbow Road,2,11,2,打開
+000017,2023/05/01,tier-D,2v2,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,11,8,5,打開
+000017,2023/05/01,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,8,6,7,打開　サンダー
+000017,2023/05/01,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,6,6,7,打開
+000017,2023/05/01,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,6,4,9,前
+000017,2023/05/01,tier-D,2v2,rMMM,Wii モーモーカントリー,Wii Moo Moo Meadows,4,5,8,前
+000017,2023/05/01,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,5,11,2,打開
+000017,2023/05/01,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,11,5,8,前
+000017,2023/05/01,tier-D,2v2,dHC,ハイラルサーキット,Hyrule Circuit,5,2,12,
+000017,2023/05/01,tier-D,2v2,WP,ウォーターパーク,Water Park,2,6,7,打開

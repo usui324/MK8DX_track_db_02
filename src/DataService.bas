@@ -5,6 +5,11 @@ Public Sub addNewData(newData As inputData)
     ' 行番号
     Dim rowNo As Long: rowNo = getNewRowNo
     
+    If Not isCorrectArray(newData.TrackData) Then
+        Call openMsgBox("有効な登録データがありません。", , vbOKOnly)
+        End
+    End If
+    
     For Each track In newData.TrackData
         Sheets(DATA).Cells(rowNo, DATA_COL_REGIST_KEY).Value = newData.registKey
         Sheets(DATA).Cells(rowNo, DATA_COL_DATE).Value = newData.playDate
@@ -36,8 +41,31 @@ Public Function getLastRowNo() As Long
     getLastRowNo = lastRowCell.Row
 End Function
 
+Public Function getNewRegistKey() As Long
+' 新規登録キーを取得
+'
+    getNewRegistKey = getLastRegistKey + 1
+    
+    If getNewRegistKey > REGIST_KEY_MAX Then
+        Call openMsgBox("これ以上のデータ登録を受け付けません。")
+        End
+    End If
+   
+End Function
+
+Public Function getLastRegistKey() As Long
+' 入力データの最新の登録キーを取得
+'
+    Dim rowNo As Long: rowNo = getLastRowNo
+    If rowNo = 1 Then
+        getLastRegistKey = 0
+    Else
+        getLastRegistKey = Sheets(DATA).Cells(rowNo, DATA_COL_REGIST_KEY).Value
+    End If
+End Function
+
 Public Sub exportData()
-' データをエクスポートする
+' データをエクスポート
 '
      ' エクスポートファイルを指定
     ChDir ThisWorkbook.Path
@@ -67,7 +95,7 @@ Public Sub exportData()
 
 End Sub
 
-Function printLine(ws As Worksheet, rowNo As Long) As String
+Private Function printLine(ws As Worksheet, rowNo As Long) As String
 ' ファイル出力する一行の文字列を返す
 '
     Dim i As Integer
@@ -78,21 +106,62 @@ Function printLine(ws As Worksheet, rowNo As Long) As String
     
 End Function
 
+Public Sub importData()
+' データをインポート
+'
+    Dim openFileName As String
+    Dim ws As Worksheet
+    Dim line As String
+    Dim arr As Variant
+    Dim rowNo As Integer: rowNo = 2
+    Dim columnNo As Integer
 
+    ' インポートファイルを指定
+    ChDir ThisWorkbook.Path
+    openFileName = Application.GetOpenFilename("模擬データ,*.txt", , "インポートするデータファイルを指定")
+    
+    ' キャンセル処理
+    If openFileName = "False" Then
+        Exit Sub
+    End If
+    
+    ' 入力対象シート
+    Set ws = ThisWorkbook.Worksheets(DATA)
+    
+    Open openFileName For Input As #1
+    
+    While Not EOF(1)
+        Line Input #1, line
+        arr = Split(line, ",")
+        
+        For columnNo = LBound(arr) To UBound(arr)
+            ws.Cells(rowNo, columnNo + 1).Value = arr(columnNo)
+        Next columnNo
+        rowNo = rowNo + 1
+    Wend
+    
+    Close #1
+    
+    Call openMsgBox("データをインポートしました", , vbInformation)
+    
+End Sub
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Public Sub deleteData()
+' データを削除する
+'
+    ' メッセージ表示
+    Dim response As Integer
+    response = openMsgBox("データを完全削除しますか？", , vbYesNo + vbDefaultButton2)
+    
+    If response <> 6 Then
+        End
+    End If
+    
+    response = openMsgBox("本当によろしいですか？", , vbYesNo + vbDefaultButton2)
+    
+    If response <> 6 Then
+        End
+    End If
+    
+    Sheets(DATA).Range(Cells(2, 1), Cells(getLastRowNo, DATA_COLS)).Clear
+End Sub

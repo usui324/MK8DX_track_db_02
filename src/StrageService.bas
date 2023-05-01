@@ -136,41 +136,6 @@ Public Function getUnselectValue(languageKey As String) As String
     End If
 End Function
 
-Public Function getRegistKey() As String
-' 登録キーを取得する
-'
-    ' 値を取得
-    Dim key As Long: key = Sheets(STORAGE).Cells(1, STORAGE_COL_REGIST_KEY).Value
-    Dim resultStr As String: resultStr = Replace(str(key), " ", "")
-    Dim resultLength As Integer: resultLength = Len(resultStr)
-    
-    ' エラー処理
-    If key > 999999 Then
-        openErrorMsgBox ("これ以上のデータ登録は受け付けられません。")
-        End
-    End If
-    
-    ' 頭に0を付け足す
-    Dim i As Integer
-    For i = resultLength To 5
-        resultStr = "0" & resultStr
-    Next i
-    
-    getRegistKey = resultStr
-    
-End Function
-
-Public Sub addRegistKey()
-' 登録キーを加算する
-'
-    Sheets(STORAGE).Unprotect PASSWORD:=PROTECT_PASSWORD
-
-    Dim registKey As Long: registKey = Sheets(STORAGE).Cells(1, STORAGE_COL_REGIST_KEY).Value
-    Sheets(STORAGE).Cells(1, STORAGE_COL_REGIST_KEY).Value = registKey + 1
-
-    Sheets(STORAGE).Protect PASSWORD:=PROTECT_PASSWORD
-End Sub
-
 Public Function getTrackKey(trackName As String) As String
 ' コースキーを取得する
 ' TODO: 設計の根本的な見直し, プルダウンの表示名と内部的な値を分けたい

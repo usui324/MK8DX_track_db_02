@@ -89,3 +89,44 @@ Public Sub goToGraphSheet()
 
     Application.ScreenUpdating = True
 End Sub
+
+Public Function isCorrectArray(ByVal arrs As Variant) As Boolean
+' 配列が正常か判定する
+'
+    isCorrectArray = True
+    
+    ' 最大インデックスを取得
+    Dim a As Long
+    On Error GoTo err
+    a = UBound(arrs)
+    
+    ' インデックスが負数ならFalse
+    If a < 0 Then
+        isCorrectArray = False
+    End If
+    
+err:
+    'エラーが生じたときエラー番号で9か13の場合はFalse
+    If err.Number = 9 Or err.Number = 13 Then
+        isCorrectArray = False
+    End If
+    
+End Function
+
+Public Function convertLongToStr(longNum As Long, strSize As Integer) As String
+' 数値を文字列に変換する
+'
+    Dim l As Integer: l = Len(CStr(longNum))
+    
+    If l >= strSize Then
+        convertLongToStr = CStr(longNum)
+        Exit Function
+    End If
+    
+    Dim i As Integer
+    For i = l + 1 To strSize
+        convertLongToStr = convertLongToStr + "0"
+    Next i
+    
+    convertLongToStr = convertLongToStr + CStr(longNum)
+End Function

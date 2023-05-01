@@ -11,7 +11,7 @@ Option Explicit
 
 ' 変数
     ' 登録キー
-    Private pRegistKey As String
+    Private pRegistKey As Long
     ' 日付
     Private pPlayDate As Date
     ' tier
@@ -22,7 +22,7 @@ Option Explicit
     Private pTrackData() As New TrackData
 
 ' プロパティ
-    Public Property Get registKey() As String
+    Public Property Get registKey() As Long
         registKey = pRegistKey
     End Property
     
@@ -43,7 +43,7 @@ Option Explicit
     End Property
 
 ' メソッド
-    Public Sub init(registKey As String, tier As String, format As String, playDate As Date, trackDataList() As TrackData)
+    Public Sub init(registKey As Long, tier As String, format As String, playDate As Date, trackDataList() As TrackData)
     ' 初期化
     '
         pRegistKey = registKey

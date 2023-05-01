@@ -8,6 +8,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const PROTECT_PASSWORD = "MK8DX"
     ' データカラム数
     Public Const DATA_COLS = 11
+    ' 登録キー桁数
+    Public Const REGIST_KEY_MAX = 999999
 
 ' シート名
     Public Const REGIST_DATA = "RegistData"

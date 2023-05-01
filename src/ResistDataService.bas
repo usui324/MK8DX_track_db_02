@@ -104,21 +104,14 @@ Public Sub registData()
     
     ' データの追加
     Call addNewData(iData)
-    
-    ' 登録キーの加算
-    addRegistKey
-    
-    ' Dataシートの表示
-    Sheets(DATA).Select
 
 End Sub
-
 
 Private Function createInputData() As inputData
 ' 入力データを形成する
 '
     ' 登録キー
-    Dim registKey As String: registKey = getRegistKey
+    Dim registKey As Long: registKey = getNewRegistKey
     ' 日付
     Dim playDate As Date: playDate = Date
     ' tier
