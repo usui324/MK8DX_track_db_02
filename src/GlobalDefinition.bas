@@ -12,6 +12,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const REGIST_KEY_MAX = 999999
     ' データテーブル名
     Public Const DATA_TABLE_NAME = "テーブル1"
+    ' ピボットテーブル名
+    Public Const GRAPH_PIVOT_TABLE_NAME = "ピボットテーブル1"
 
 ' シート名
     Public Const REGIST_DATA = "RegistData"
@@ -32,6 +34,17 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const SELECT_TRACK_EN = "Select Track"
     Public Const UNSELECT_JP = "未選択"
     Public Const UNSELECT_EN = "Unselected"
+    
+' ピボットテーブル関連
+    Public Const PIVOT_FILTER_NAME_1 = "模擬tier / Match tier"
+    Public Const PIVOT_FILTER_NAME_2 = "形式 / Format"
+    Public Const PIVOT_FILTER_NAME_3 = "スタート順位 / Starting rank"
+    Public Const PIVOT_FILTER_NAME_4 = "備考 / Detail"
+    Public Const PIVOT_ROW_NAME = "コース名 / Track name"
+    Public Const PIVOT_COL_NAME_1 = "Ave. points"
+    Public Const PIVOT_COL_NAME_2 = "Ave. rank"
+    Public Const PIVOT_COL_NAME_3 = "回数 / Times"
+    
 
 ' セル座標 - RegistData
     Public Const REGIST_ROW_TIER = 2
@@ -67,6 +80,7 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const SETTINGS_COL_VALUE = 2
     Public Const SETTINGS_COL_DISPLAY = 3
     Public Const SETTINGS_ROW_LANGUAGE = 3
+    Public Const SETTINGS_ROW_RACE_NUM = 4
 
 ' セル座標 - Data
     Public Const DATA_ROW_HEADER = 1
