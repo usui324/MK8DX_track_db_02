@@ -38,7 +38,14 @@ Public Function getLastRowNo() As Long
 ' 入力データの最終行の行番号を取得
 '
     Dim lastRowCell As Range: Set lastRowCell = Sheets(DATA).Cells(Rows.Count, 1).End(xlUp)
-    getLastRowNo = lastRowCell.Row
+    
+    ' 例外処理
+    If lastRowCell.Row = DATA_ROW_HEADER + 1 And lastRowCell.Value = "" Then
+        getLastRowNo = DATA_ROW_HEADER
+    Else
+        getLastRowNo = lastRowCell.Row
+    End If
+
 End Function
 
 Public Function getNewRegistKey() As Long
@@ -164,4 +171,7 @@ Public Sub deleteData()
     End If
     
     Sheets(DATA).Range(Cells(2, 1), Cells(getLastRowNo, DATA_COLS)).ClearContents
+    
+    ' テーブルのサイズ変更
+    Sheets(DATA).ListObjects(DATA_TABLE_NAME).Resize Range(Cells(DATA_ROW_HEADER, DATA_COL_REGIST_KEY), Cells(DATA_ROW_HEADER + 1, DATA_COLS))
 End Sub

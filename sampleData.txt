@@ -44,5 +44,89 @@
 17,2023/05/01,tier-D,2v2,rMMM,Wii モーモーカントリー,Wii Moo Moo Meadows,4,5,8,前
 17,2023/05/01,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,5,11,2,打開
 17,2023/05/01,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,11,5,8,前
-17,2023/05/01,tier-D,2v2,dHC,ハイラルサーキット,Hyrule Circuit,5,2,12,
+17,2023/05/01,tier-D,2v2,dHC,ハイラルサーキット,Hyrule Circuit,5,2,12,早め戻り
 17,2023/05/01,tier-D,2v2,WP,ウォーターパーク,Water Park,2,6,7,打開
+18,2023/05/02,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,7,9,4,打開
+18,2023/05/02,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,9,1,15,前
+18,2023/05/02,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,1,4,9,打開
+18,2023/05/02,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,4,9,4,打開
+18,2023/05/02,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,9,12,1,
+18,2023/05/02,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,12,3,10,早め戻り
+18,2023/05/02,tier-D,2v2,rGV,Wii グラグラかざん,Wii Grumble Volcano,3,1,15,前
+18,2023/05/02,tier-D,2v2,rMP,3DS ミュージックパーク,3DS Music Park,1,2,12,前
+18,2023/05/02,tier-D,2v2,bMC3,SFC マリオサーキット3,SNES Mario Circuit 3,2,5,8,打開
+18,2023/05/02,tier-D,2v2,bBB,Tour ベルリンシュトラーセ,Tour Berlin Byways,5,11,2,前
+18,2023/05/02,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,11,12,1,打開
+18,2023/05/02,tier-D,2v2,Ed,エレクトロドリーム,Electrodrome,12,9,4,
+19,2023/05/02,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,2,4,9,打開
+19,2023/05/02,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,4,3,10,打開
+19,2023/05/02,tier-D,2v2,rDP3,SFC ドーナツへいや3,SNES Donut Plains 3,3,12,1,打開
+19,2023/05/02,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,12,7,6,
+19,2023/05/02,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,7,11,2,前
+19,2023/05/02,tier-D,2v2,rGV,Wii グラグラかざん,Wii Grumble Volcano,11,7,6,前
+19,2023/05/02,tier-D,2v2,TM,ねじれマンション,Twisted Mansion,7,4,9,打開
+19,2023/05/02,tier-D,2v2,rRRd,N64 レインボーロード,N64 Rainbow Road,4,9,4,打開
+19,2023/05/02,tier-D,2v2,rMP,3DS ミュージックパーク,3DS Music Park,9,6,7,早め戻り
+19,2023/05/02,tier-D,2v2,bBR,Tour バンコクラッシュ,Tour Bangkok Rush,6,5,8,前
+19,2023/05/02,tier-D,2v2,bDS,Wii DKスノーボードクロス,Wii DK Summit,5,4,9,早め戻り
+19,2023/05/02,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,4,2,12,打開
+20,2023/05/02,tier-D,2v2,bDS,Wii DKスノーボードクロス,Wii DK Summit,9,10,3,
+20,2023/05/02,tier-D,2v2,rDP3,SFC ドーナツへいや3,SNES Donut Plains 3,10,2,12,打開
+20,2023/05/02,tier-D,2v2,bMC3,SFC マリオサーキット3,SNES Mario Circuit 3,2,8,5,打開
+20,2023/05/02,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,8,9,4,打開
+20,2023/05/02,tier-D,2v2,bSS,Tour シドニーサンシャイン,Tour Sydney Sprint,9,5,8,前
+20,2023/05/02,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,5,1,15,打開
+20,2023/05/02,tier-D,2v2,BDD,ホネホネさばく,Bone Dry Dunes,1,5,8,前
+20,2023/05/02,tier-D,2v2,rGV,Wii グラグラかざん,Wii Grumble Volcano,5,7,6,前
+20,2023/05/02,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,7,1,15,前
+20,2023/05/02,tier-D,2v2,bLL,Tour ロンドンアベニュー,Tour London Loop,1,11,2,打開
+20,2023/05/02,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,11,9,4,
+20,2023/05/02,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,9,7,6,打開
+21,2023/05/06,others,2v2,bMT,Wii メイプルツリーハウス,Wii Maple Treeway,1,4,9,前
+21,2023/05/06,others,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,4,6,7,
+21,2023/05/06,others,2v2,TM,ねじれマンション,Twisted Mansion,6,1,15,打開
+21,2023/05/06,others,2v2,rMMM,Wii モーモーカントリー,Wii Moo Moo Meadows,1,6,7,前
+21,2023/05/06,others,2v2,Ed,エレクトロドリーム,Electrodrome,6,8,5,
+21,2023/05/06,others,2v2,bAD,Tour アムステルダムブルーム,Tour Amsterdam Drift,8,3,10,前
+21,2023/05/06,others,2v2,MW,ワリオスノーマウンテン,Mount Wario,3,6,7,打開
+21,2023/05/06,others,2v2,bPG,DS ピーチガーデン,DS Peach Garden,6,9,4,打開
+21,2023/05/06,others,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,9,1,15,前
+21,2023/05/06,others,2v2,bCMa,Wii ココナッツモール,Wii Coconut Mall,1,11,2,前
+21,2023/05/06,others,2v2,bBL,GBA テレサレイク,GBA Boo Lake,11,4,9,打開
+21,2023/05/06,others,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,4,3,10,打開
+22,2023/05/07,tier-D,2v2,bDS,Wii DKスノーボードクロス,Wii DK Summit,1,7,6,打開
+22,2023/05/07,tier-D,2v2,bCMa,Wii ココナッツモール,Wii Coconut Mall,7,8,5,前
+22,2023/05/07,tier-D,2v2,rRRd,N64 レインボーロード,N64 Rainbow Road,8,5,8,前
+22,2023/05/07,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,5,8,5,
+22,2023/05/07,tier-D,2v2,bPP,Tour パリプロムナード,Tour Paris Promenade,8,3,10,早め戻り
+22,2023/05/07,tier-D,2v2,rDP3,SFC ドーナツへいや3,SNES Donut Plains 3,3,9,4,打開
+22,2023/05/07,tier-D,2v2,dIIO,ツルツルツイスター,Ice Ice Outpost,9,7,6,打開
+22,2023/05/07,tier-D,2v2,MW,ワリオスノーマウンテン,Mount Wario,7,9,4,打開
+22,2023/05/07,tier-D,2v2,bBB,Tour ベルリンシュトラーセ,Tour Berlin Byways,9,7,6,早め戻り
+22,2023/05/07,tier-D,2v2,bRRM,3DS ロックロックマウンテン,3DS Rock Rock Mountain,7,10,3,
+22,2023/05/07,tier-D,2v2,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,10,7,6,打開
+22,2023/05/07,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,7,8,5,早め戻り
+23,2023/05/07,tier-D,2v2,rMC,GBA マリオサーキット,GBA Mario Circuit,1,5,8,打開
+23,2023/05/07,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,5,4,9,前
+23,2023/05/07,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,4,2,12,打開
+23,2023/05/07,tier-D,2v2,rWS,DS ワリオスタジアム,DS Wario Stadium,2,10,3,打開
+23,2023/05/07,tier-D,2v2,bBB,Tour ベルリンシュトラーセ,Tour Berlin Byways,10,12,1,前
+23,2023/05/07,tier-D,2v2,bDS,Wii DKスノーボードクロス,Wii DK Summit,12,8,5,前
+23,2023/05/07,tier-D,2v2,dNBC,3DS ネオクッパシティ,3DS Neo Bowser City,8,5,8,打開
+23,2023/05/07,tier-D,2v2,bMC3,SFC マリオサーキット3,SNES Mario Circuit 3,5,4,9,打開
+23,2023/05/07,tier-D,2v2,bCMa,Wii ココナッツモール,Wii Coconut Mall,4,9,4,打開
+23,2023/05/07,tier-D,2v2,bAD,Tour アムステルダムブルーム,Tour Amsterdam Drift,9,6,7,打開
+23,2023/05/07,tier-D,2v2,bSSy,Tour シンガポールスプラッシュ,Tour Singapore Speedway,6,1,15,打開
+23,2023/05/07,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,1,11,2,打開
+24,2023/05/07,tier-D,2v2,rMMM,Wii モーモーカントリー,Wii Moo Moo Meadows,2,6,7,打開
+24,2023/05/07,tier-D,2v2,dEA,エキサイトバイク,Excitebike Arena,6,12,1,打開
+24,2023/05/07,tier-D,2v2,MKS,マリオカートスタジアム,Mario Kart Stadium,12,6,7,打開
+24,2023/05/07,tier-D,2v2,rDKJ,3DS DKジャングル,3DS DK Jungle,6,9,4,前
+24,2023/05/07,tier-D,2v2,bBB,Tour ベルリンシュトラーセ,Tour Berlin Byways,9,3,10,前
+24,2023/05/07,tier-D,2v2,bBR,Tour バンコクラッシュ,Tour Bangkok Rush,3,12,1,前
+24,2023/05/07,tier-D,2v2,bSR,DS キノコリッジウェイ,DS Shroom Ridge,12,2,12,前
+24,2023/05/07,tier-D,2v2,TM,ねじれマンション,Twisted Mansion,2,1,15,前
+24,2023/05/07,tier-D,2v2,bMG,Wii キノコキャニオン,Wii Mushroom Gorge,1,3,10,前
+24,2023/05/07,tier-D,2v2,bTB,Tour トーキョースクランブル,Tour Tokyo Blur,3,1,15,前
+24,2023/05/07,tier-D,2v2,DS,ドルフィンみさき,Dolphin Shoals,1,11,2,前
+24,2023/05/07,tier-D,2v2,dRiR,GBA リボンロード,GBA Ribbon Road,11,5,8,打開

@@ -10,6 +10,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const DATA_COLS = 11
     ' 登録キー桁数
     Public Const REGIST_KEY_MAX = 999999
+    ' データテーブル名
+    Public Const DATA_TABLE_NAME = "テーブル1"
 
 ' シート名
     Public Const REGIST_DATA = "RegistData"
@@ -67,6 +69,7 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const SETTINGS_ROW_LANGUAGE = 3
 
 ' セル座標 - Data
+    Public Const DATA_ROW_HEADER = 1
     Public Const DATA_COL_REGIST_KEY = 1
     Public Const DATA_COL_DATE = 2
     Public Const DATA_COL_TIER = 3
