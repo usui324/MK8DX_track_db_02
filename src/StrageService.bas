@@ -151,3 +151,57 @@ Public Function getTrackKey(trackName As String) As String
     End If
         
 End Function
+
+Public Function getPointFlg() As Integer
+' 得点ソート値を取得
+'
+    getPointFlg = Sheets(STORAGE).Cells(STORAGE_ROW_POINT_FLG, STORAGE_COL_POINT_FLG).Value
+End Function
+
+Public Function getRankFlg() As Integer
+' 順位ソート値を取得
+'
+    getRankFlg = Sheets(STORAGE).Cells(STORAGE_ROW_RANK_FLG, STORAGE_COL_RANK_FLG).Value
+End Function
+
+Public Function getTimesFlg() As Integer
+' 回数ソート値を取得
+'
+    getTimesFlg = Sheets(STORAGE).Cells(STORAGE_ROW_TIMES_FLG, STORAGE_COL_TIMES_FLG).Value
+End Function
+
+Public Sub incrementPointFlg()
+' 得点ソート値を加算
+'
+    Sheets(STORAGE).Unprotect PASSWORD:=PROTECT_PASSWORD
+    
+    Sheets(STORAGE).Cells(STORAGE_ROW_POINT_FLG, STORAGE_COL_POINT_FLG).Value = (Sheets(STORAGE).Cells(STORAGE_ROW_POINT_FLG, STORAGE_COL_POINT_FLG).Value + 1) Mod 2
+    Sheets(STORAGE).Cells(STORAGE_ROW_RANK_FLG, STORAGE_COL_RANK_FLG).Value = 0
+    Sheets(STORAGE).Cells(STORAGE_ROW_TIMES_FLG, STORAGE_COL_TIMES_FLG).Value = 0
+    
+    Sheets(STORAGE).Protect PASSWORD:=PROTECT_PASSWORD
+End Sub
+
+Public Sub incrementRankFlg()
+' 順位ソート値を加算
+'
+    Sheets(STORAGE).Unprotect PASSWORD:=PROTECT_PASSWORD
+    
+    Sheets(STORAGE).Cells(STORAGE_ROW_POINT_FLG, STORAGE_COL_POINT_FLG).Value = 0
+    Sheets(STORAGE).Cells(STORAGE_ROW_RANK_FLG, STORAGE_COL_RANK_FLG).Value = (Sheets(STORAGE).Cells(STORAGE_ROW_RANK_FLG, STORAGE_COL_RANK_FLG).Value + 1) Mod 2
+    Sheets(STORAGE).Cells(STORAGE_ROW_TIMES_FLG, STORAGE_COL_TIMES_FLG).Value = 0
+    
+    Sheets(STORAGE).Protect PASSWORD:=PROTECT_PASSWORD
+End Sub
+
+Public Sub incrementTimesFlg()
+' 回数ソート値を加算
+'
+    Sheets(STORAGE).Unprotect PASSWORD:=PROTECT_PASSWORD
+    
+    Sheets(STORAGE).Cells(STORAGE_ROW_POINT_FLG, STORAGE_COL_POINT_FLG).Value = 0
+    Sheets(STORAGE).Cells(STORAGE_ROW_RANK_FLG, STORAGE_COL_RANK_FLG).Value = 0
+    Sheets(STORAGE).Cells(STORAGE_ROW_TIMES_FLG, STORAGE_COL_TIMES_FLG).Value = (Sheets(STORAGE).Cells(STORAGE_ROW_TIMES_FLG, STORAGE_COL_TIMES_FLG).Value + 1) Mod 2
+    
+    Sheets(STORAGE).Protect PASSWORD:=PROTECT_PASSWORD
+End Sub

@@ -71,8 +71,12 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const STORAGE_ROW_TIER_NAME = 1
     Public Const STORAGE_COL_FORMAT_NAME = 6
     Public Const STORAGE_ROW_FORMAT_NAME = 1
-    Public Const STORAGE_COL_REGIST_KEY = 7
-    Public Const STORAGE_ROW_REGIST_KEY = 1
+    Public Const STORAGE_COL_POINT_FLG = 7
+    Public Const STORAGE_ROW_POINT_FLG = 1
+    Public Const STORAGE_COL_RANK_FLG = 8
+    Public Const STORAGE_ROW_RANK_FLG = 1
+    Public Const STORAGE_COL_TIMES_FLG = 9
+    Public Const STORAGE_ROW_TIMES_FLG = 1
     
 
 ' ÉZÉãç¿ïW - SETTINGS
