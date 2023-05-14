@@ -44,7 +44,12 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const PIVOT_COL_NAME_1 = "Ave. points"
     Public Const PIVOT_COL_NAME_2 = "Ave. rank"
     Public Const PIVOT_COL_NAME_3 = "回数 / Times"
-    
+
+' 初期選択セル
+    Public Const INIT_SELECT_REGIST_DATA = "C2"
+    Public Const INIT_SELECT_GRAPH = "B1"
+    Public Const INIT_SELECT_DATA = "A1"
+    Public Const INIT_SELECT_SETTINGS = "C3"
 
 ' セル座標 - RegistData
     Public Const REGIST_ROW_TIER = 2

@@ -60,6 +60,9 @@ Public Sub goToRegistDataSheet()
     Application.WindowState = xlNormal
     ActiveWindow.Width = 430
     ActiveWindow.Height = 720
+    ' セルの選択
+    Range(INIT_SELECT_REGIST_DATA).Select
+    
 
     Application.ScreenUpdating = True
 End Sub
@@ -73,7 +76,9 @@ Public Sub goToDataSheet()
     selectSheet (DATA)
     ' ウィンドウサイズの調整
     Application.WindowState = xlMaximized
-
+    ' セルの選択
+    Range(INIT_SELECT_DATA).Select
+    
     Application.ScreenUpdating = True
 End Sub
 
@@ -86,6 +91,8 @@ Public Sub goToGraphSheet()
     selectSheet (GRAPH)
     ' ウィンドウサイズの調整
     Application.WindowState = xlMaximized
+    ' セルの選択
+    Range(INIT_SELECT_GRAPH).Select
 
     Application.ScreenUpdating = True
 End Sub
@@ -99,6 +106,8 @@ Public Sub goToSettingsSheet()
     selectSheet (SETTINGS)
     ' ウィンドウサイズの調整
     Application.WindowState = xlMaximized
+    ' セルの選択
+    Range(INIT_SELECT_SETTINGS).Select
 
     Application.ScreenUpdating = True
 End Sub
