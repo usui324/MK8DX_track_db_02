@@ -90,6 +90,19 @@ Public Sub goToGraphSheet()
     Application.ScreenUpdating = True
 End Sub
 
+Public Sub goToSettingsSheet()
+' 設定シートへ移動
+'
+    Application.ScreenUpdating = False
+    
+    ' シート選択
+    selectSheet (SETTINGS)
+    ' ウィンドウサイズの調整
+    Application.WindowState = xlMaximized
+
+    Application.ScreenUpdating = True
+End Sub
+
 Public Function isCorrectArray(ByVal arrs As Variant) As Boolean
 ' 配列が正常か判定する
 '
