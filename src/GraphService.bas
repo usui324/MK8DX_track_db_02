@@ -13,10 +13,10 @@ Public Sub resetGraphFilter()
     ' ピボットテーブル
     Dim pTable As PivotTable: Set pTable = Sheets(GRAPH).PivotTables(GRAPH_PIVOT_TABLE_NAME)
     ' フィルターのリセット
-    pTable.PivotFields(PIVOT_FILTER_NAME_1).CurrentPage = "(ALL)"
-    pTable.PivotFields(PIVOT_FILTER_NAME_2).CurrentPage = "(ALL)"
-    pTable.PivotFields(PIVOT_FILTER_NAME_3).CurrentPage = "(ALL)"
-    pTable.PivotFields(PIVOT_FILTER_NAME_4).CurrentPage = "(ALL)"
+    pTable.PivotFields(PIVOT_FILTER_NAME_1).ClearAllFilters
+    pTable.PivotFields(PIVOT_FILTER_NAME_2).ClearAllFilters
+    pTable.PivotFields(PIVOT_FILTER_NAME_3).ClearAllFilters
+    pTable.PivotFields(PIVOT_FILTER_NAME_4).ClearAllFilters
     
 End Sub
 
