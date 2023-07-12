@@ -100,14 +100,14 @@ Public Sub registData()
 ' データを登録する
 '
     ' 入力データの形成
-    Dim iData As inputData: Set iData = createInputData
+    Dim iData As InputData: Set iData = createInputData
     
     ' データの追加
     Call addNewData(iData)
 
 End Sub
 
-Private Function createInputData() As inputData
+Private Function createInputData() As InputData
 ' 入力データを形成する
 '
     ' 登録キー
@@ -134,7 +134,7 @@ Private Function createInputData() As inputData
     Next i
     
     ' 入力データ
-    Dim iData As New inputData
+    Dim iData As New InputData
     Call iData.init(registKey, tier, format, Date, track)
     Set createInputData = iData
     

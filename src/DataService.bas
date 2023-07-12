@@ -1,5 +1,5 @@
 Attribute VB_Name = "DataService"
-Public Sub addNewData(newData As inputData)
+Public Sub addNewData(newData As InputData)
 ' 新規データの追加
 '
     ' 行番号
