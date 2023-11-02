@@ -1,7 +1,7 @@
 Attribute VB_Name = "GlobalDefinition"
 ' 定数
     ' コース数
-    Public Const TRACK_NUM = 88
+    Public Const TRACK_NUM = 96
     ' レース数
     Public Const RACE_NUM = 12
     ' シート保護パスワード
