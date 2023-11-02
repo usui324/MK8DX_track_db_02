@@ -152,3 +152,9 @@ Public Function convertLongToStr(longNum As Long, strSize As Integer) As String
     
     convertLongToStr = convertLongToStr + CStr(longNum)
 End Function
+
+Public Sub saveBook()
+' ï€ë∂èàóù
+'
+    ThisWorkbook.Save
+End Sub
