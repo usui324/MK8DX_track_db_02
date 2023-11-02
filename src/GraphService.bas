@@ -46,11 +46,11 @@ Public Sub sortGraphByPoint()
     ' 規定レースフィルター
     setGraphMinNumOfRace
     
-    ' フラグの値が0なら昇順ソート / 1なら降順ソート
+    ' フラグの値が0なら降順ソート / 1なら昇順ソート
     If flg = 0 Then
-        sortGraphByPointAscending
-    Else
         sortGraphByPointDescending
+    Else
+        sortGraphByPointAscending
     End If
     
     ' フラグを加算
