@@ -58,7 +58,7 @@ Public Sub goToRegistDataSheet()
     selectSheet (REGIST_DATA)
     ' ウィンドウサイズの調整
     Application.WindowState = xlNormal
-    ActiveWindow.Width = 430
+    ActiveWindow.Width = 470
     ActiveWindow.Height = 720
     ' セルの選択
     Range(INIT_SELECT_REGIST_DATA).Select

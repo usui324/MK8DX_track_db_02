@@ -136,6 +136,18 @@ Public Function getUnselectValue(languageKey As String) As String
     End If
 End Function
 
+Public Function getSelectTrackValue(languageKey As String) As String
+' コースを選択の文言を取得
+'
+    If languageKey = "jp" Then
+        getSelectTrackValue = SELECT_TRACK_JP
+    ElseIf languageKey = "en" Then
+        getSelectTrackValue = SELECT_TRACK_EN
+    Else
+        openErrorMsgBox ("invalid languageKey: " + language)
+    End If
+End Function
+
 Public Function getTrackKey(trackName As String) As String
 ' コースキーを取得する
 ' TODO: 設計の根本的な見直し, プルダウンの表示名と内部的な値を分けたい

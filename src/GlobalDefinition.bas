@@ -56,12 +56,11 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const REGIST_COL_TIER = 3
     Public Const REGIST_ROW_FORMAT = 3
     Public Const REGIST_COL_FORMAT = 3
-    Public Const REGIST_ROW_START_RANK = 4
-    Public Const REGIST_COL_START_RANK = 3
-    Public Const REGIST_ROW_HEADER = 5
+    Public Const REGIST_ROW_HEADER = 4
     Public Const REGIST_COL_TRACK_NAME = 2
-    Public Const REGIST_COL_RANK = 3
-    Public Const REGIST_COL_REMARK = 4
+    Public Const REGIST_COL_START_RANK = 3
+    Public Const REGIST_COL_RANK = 4
+    Public Const REGIST_COL_REMARK = 5
 
 ' ÉZÉãç¿ïW - STORAGE
     Public Const STORAGE_COL_TRACK_NAME = 1

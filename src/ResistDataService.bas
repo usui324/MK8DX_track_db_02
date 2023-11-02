@@ -9,7 +9,7 @@ Public Sub initInputData()
     initInputTier
     ' 形式欄の初期化
     initInputFormat
-    ' 開始順位欄の初期化
+    ' スタート位置欄の初期化
     initInputStartingRank
     ' コース名欄の初期化
     initInputTrackName
@@ -42,14 +42,6 @@ Private Sub initInputFormat()
     Range("A1").Select
 End Sub
 
-Private Sub initInputStartingRank()
-' 開始順位欄の初期化
-    
-    Sheets(REGIST_DATA).Cells(REGIST_ROW_START_RANK, REGIST_COL_START_RANK).Value = initValue
-    
-    Range("A1").Select
-End Sub
-
 Private Sub initInputTrackName()
 ' コース名欄の初期化
 '
@@ -62,6 +54,20 @@ Private Sub initInputTrackName()
     Dim i As Integer
     For i = 1 To RACE_NUM:
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_TRACK_NAME).Value = initValue
+    Next i
+    
+    Range("A1").Select
+    
+End Sub
+
+Private Sub initInputStartingRank()
+' スタート位置欄の初期化
+'
+    Sheets(REGIST_DATA).Select
+    
+    Dim i As Integer
+    For i = 1 To RACE_NUM
+        Cells(REGIST_ROW_HEADER + i, REGIST_COL_START_RANK).Value = ""
     Next i
     
     Range("A1").Select
@@ -162,12 +168,15 @@ End Function
 Private Function isInputTrackName(i As Integer)
 ' コース名が入力されているか
 '
-    ' 未選択の文言
-    Dim unselectValue As String: unselectValue = getUnselectValue(getLanguage)
+    ' コースを選択の文言
+    Dim unselectValue As String: unselectValue = getSelectTrackValue(getLanguage)
     ' 判定対象セル
     Dim c As Range: Set c = Sheets(REGIST_DATA).Cells(REGIST_ROW_HEADER + i, REGIST_COL_TRACK_NAME)
     
     isInputTrackName = c.Value <> "" And c.Value <> unselectValue
+    
+    Debug.Print unselectValue
+    
 End Function
 
 Private Function isInputRank(i As Integer)
@@ -196,12 +205,5 @@ End Function
 
 Private Function getStartingRank(i As Integer) As Integer
 ' スタート順位を取得
-    Dim offsetRow As Integer
-    If i <> 1 Then
-        offsetRow = -1
-    Else
-        offsetRow = -2
-    End If
-    
-    getStartingRank = Sheets(REGIST_DATA).Cells(REGIST_ROW_HEADER + i, REGIST_COL_RANK).Offset(offsetRow, 0)
+    getStartingRank = Sheets(REGIST_DATA).Cells(REGIST_ROW_HEADER + i, REGIST_COL_START_RANK)
 End Function
