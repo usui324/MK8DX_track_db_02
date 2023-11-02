@@ -49,7 +49,7 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const INIT_SELECT_REGIST_DATA = "C2"
     Public Const INIT_SELECT_GRAPH = "B1"
     Public Const INIT_SELECT_DATA = "A1"
-    Public Const INIT_SELECT_SETTINGS = "C3"
+    Public Const INIT_SELECT_SETTINGS = "A1"
 
 ' ÉZÉãç¿ïW - RegistData
     Public Const REGIST_ROW_TIER = 2

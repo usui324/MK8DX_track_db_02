@@ -28,7 +28,7 @@ Private Sub initInputTier()
     
     Sheets(REGIST_DATA).Cells(REGIST_ROW_TIER, REGIST_COL_TIER).Value = initValue
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
 End Sub
 
 Private Sub initInputFormat()
@@ -39,7 +39,7 @@ Private Sub initInputFormat()
     
     Sheets(REGIST_DATA).Cells(REGIST_ROW_FORMAT, REGIST_COL_FORMAT).Value = initValue
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
 End Sub
 
 Private Sub initInputTrackName()
@@ -56,7 +56,7 @@ Private Sub initInputTrackName()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_TRACK_NAME).Value = initValue
     Next i
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
 
@@ -70,7 +70,7 @@ Private Sub initInputStartingRank()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_START_RANK).Value = ""
     Next i
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
 
@@ -84,7 +84,7 @@ Private Sub initInputRank()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_RANK).Value = ""
     Next i
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
     
@@ -98,7 +98,7 @@ Private Sub initInputRemark()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_REMARK).Value = ""
     Next i
     
-    Range("A1").Select
+    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
 
