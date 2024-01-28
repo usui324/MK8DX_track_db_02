@@ -17,6 +17,8 @@ Public Sub initInputData()
     initInputRank
     ' 備考欄の初期化
     initInputRemark
+    ' コース画像の消去
+    removeAllTrackImg
     
 End Sub
 
@@ -110,7 +112,10 @@ Public Sub registData()
     
     ' データの追加
     Call addNewData(iData)
-
+    
+    ' コース画像の消去
+    removeAllTrackImg
+    
 End Sub
 
 Private Function createInputData() As InputData
