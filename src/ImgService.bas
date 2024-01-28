@@ -42,5 +42,13 @@ Public Sub addTrackImg(trackKey As String)
     )
     ' ‰æ‘œ‚Éƒ}ƒNƒ‚ğ“o˜^
     img.OnAction = "removeTrackImg"
+    ' ‰æ‘œ‚ÉŒø‰Ê‚ğ•t—^
+    With img.Glow
+        .Color.ObjectThemeColor = msoThemeColorAccent1
+        .Color.TintAndShade = 0
+        .Color.Brightness = 0
+        .Transparency = 0.6
+        .Radius = 5
+    End With
     
 End Sub
