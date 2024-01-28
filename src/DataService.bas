@@ -75,7 +75,7 @@ Public Sub exportData()
 ' データをエクスポート
 '
      ' エクスポートファイルを指定
-    ChDir ThisWorkbook.Path
+    ChDir ThisWorkbook.path
     Dim saveFileName As String
     saveFileName = Application.GetSaveAsFilename(InitialFileName:="mogiData.txt", filefilter:="模擬データ,*.txt")
 
@@ -124,7 +124,7 @@ Public Sub importData()
     Dim columnNo As Integer
 
     ' インポートファイルを指定
-    ChDir ThisWorkbook.Path
+    ChDir ThisWorkbook.path
     openFileName = Application.GetOpenFilename("模擬データ,*.txt", , "インポートするデータファイルを指定")
     
     ' キャンセル処理

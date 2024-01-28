@@ -45,6 +45,19 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const PIVOT_COL_NAME_2 = "Ave. rank"
     Public Const PIVOT_COL_NAME_3 = "回数 / Times"
 
+' コース画像関連
+    ' ディレクトリ
+    Public Const TRACK_IMG_DIR = "\track_img\"
+    ' 配置位置x
+    Public Const TRACK_IMG_LEFT = 210
+    ' 配置位置y
+    Public Const TRACK_IMG_TOP = 100
+    ' 配置サイズx
+    Public Const TRACK_IMG_WIDTH = 225
+    ' 配置サイズy
+    Public Const TRACK_IMG_HEIGHT = 225
+    
+
 ' 初期選択セル
     Public Const INIT_SELECT_REGIST_DATA = "C2"
     Public Const INIT_SELECT_GRAPH = "B1"

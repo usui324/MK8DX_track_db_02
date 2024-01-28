@@ -55,6 +55,16 @@ Public Function getTrackNameEn(trackKey As String) As String
     
 End Function
 
+Public Function getTrackImgFileName(trackKey As String) As String
+' コースの画像ファイル名を取得する
+'
+    Dim recordRow As Long: recordRow = getMasterRecord(TRACK_MASTER, trackKey).Row
+    Dim col As Long: col = getMasterColumn(TRACK_MASTER, "imgFileName").column
+    
+    getTrackImgFileName = Sheets(TRACK_MASTER).Cells(recordRow, col).Value
+    
+End Function
+
 Public Function getTierNameList() As Range
 ' tier名リストを取得する
 

@@ -41,12 +41,12 @@ Public Function openMsgBox(message As String, Optional title As String = "MK8DX 
 
 End Function
 
-Public Function findWholeMatch(r As Range, Target As Variant) As Range
+Public Function findWholeMatch(r As Range, target As Variant) As Range
 ' Rangeオブジェクトから完全一致するオブジェクトを探索する
 ' @param r 探索元Rangeオブジェクト
 ' @param target 探索対象文字列
 
-    Set findWholeMatch = r.Find(Target, LookAt:=xlWhole, MatchCase:=True)
+    Set findWholeMatch = r.Find(target, LookAt:=xlWhole, MatchCase:=True)
     
 End Function
 

@@ -18,7 +18,7 @@ Sub ExportAll()
 
     ' このブックを対象とする
     Set targetBook = ThisWorkbook
-    targetPath = targetBook.Path
+    targetPath = targetBook.path
 
     ' モジュール一覧を取得
     Set moduleList = targetBook.VBProject.VBComponents
