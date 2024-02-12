@@ -102,6 +102,7 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const SETTINGS_COL_DISPLAY = 3
     Public Const SETTINGS_ROW_LANGUAGE = 3
     Public Const SETTINGS_ROW_RACE_NUM = 4
+    Public Const SETTINGS_ROW_SHOWING_MAP = 5
 
 ' ÉZÉãç¿ïW - Data
     Public Const DATA_ROW_HEADER = 1
