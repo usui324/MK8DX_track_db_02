@@ -14,6 +14,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const DATA_TABLE_NAME = "テーブル1"
     ' ピボットテーブル名
     Public Const GRAPH_PIVOT_TABLE_NAME = "ピボットテーブル1"
+    ' 最大知識数
+    Public Const MAX_KNOWLEDGE = 4
 
 ' シート名
     Public Const REGIST_DATA = "RegistData"
@@ -22,6 +24,7 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const DATA = "Data"
     Public Const GRAPH = "Graph"
     Public Const TRACK_MASTER = "TrackMaster"
+    Public Const KNOWLEDGE_MASTER = "KnowledgeMaster"
     Public Const CUP_MASTER = "CupMaster"
     Public Const VERSION_MASTER = "VersionMaster"
     Public Const LOUNGE_TIER_MASTER = "LoungeTierMaster"
@@ -74,6 +77,8 @@ Attribute VB_Name = "GlobalDefinition"
     Public Const REGIST_COL_START_RANK = 3
     Public Const REGIST_COL_RANK = 4
     Public Const REGIST_COL_REMARK = 5
+    Public Const REGIST_ROW_KNOWLEDGE = 18
+    Public Const REGIST_COL_KNOWLEDGE = 3
 
 ' セル座標 - STORAGE
     Public Const STORAGE_COL_TRACK_NAME = 1

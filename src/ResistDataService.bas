@@ -19,6 +19,9 @@ Public Sub initInputData()
     initInputRemark
     ' コース画像の消去
     removeAllTrackImg
+    ' 知識の消去
+    initKnowledge
+    
     
 End Sub
 

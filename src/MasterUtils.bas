@@ -183,6 +183,11 @@ Public Function getMasterDatas(masterName As String, key As Variant, keyColumnNa
     ' 取得するレコードリスト
     Dim records As Range: Set records = getMasterRecords(masterName, key, keyColumnName)
     
+    If records Is Nothing Then
+        Set getMasterDatas = Nothing
+        Exit Function
+    End If
+    
     Dim i As Long
     For i = 1 To records.Count
         If records(i).column = columnNo Then
@@ -195,14 +200,3 @@ Public Function getMasterDatas(masterName As String, key As Variant, keyColumnNa
     Next i
 
 End Function
-
-Sub test()
-    
-    Dim hoge As Range: Set hoge = getMasterDatas("KnowledgeMaster", "SSC", "trackKey", "value")
-    Dim i As Long
-    For i = 1 To hoge.Count
-        Debug.Print hoge(i)
-    Next
-    
-    
-End Sub
