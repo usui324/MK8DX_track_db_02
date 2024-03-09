@@ -88,3 +88,8 @@ Public Function getPoint(rankKey As Integer) As Integer
     
 End Function
 
+Public Function getKnowledge(trackKey As String) As String()
+' ’mŽ¯‚ðŽæ“¾‚·‚é
+'
+    
+End Function

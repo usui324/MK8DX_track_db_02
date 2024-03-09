@@ -50,6 +50,34 @@ Public Function findWholeMatch(r As Range, target As Variant) As Range
     
 End Function
 
+Public Function findAllWholeMatch(r As Range, target As Variant) As Range
+' Rangeオブジェクトから完全一致するオブジェクトを全て探索する
+' @param r 探索元Rangeオブジェクト
+' @param target 探索対象文字列
+
+    Dim foundCell As Range, firstCell As Range
+    
+    ' 最初の一つ目の探索
+    Set foundCell = r.Find(target, LookAt:=xlWhole, MatchCase:=True)
+    If foundCell Is Nothing Then
+        Set findAllWholeMatch = Nothing
+        Exit Function
+    End If
+    Set firstCell = foundCell
+    Set findAllWholeMatch = foundCell
+    
+    ' 二つ目以降の探索
+    Do
+        Set foundCell = r.FindNext(foundCell)
+        If foundCell.Address = firstCell.Address Then
+            Exit Do
+        Else
+            Set findAllWholeMatch = Union(findAllWholeMatch, foundCell)
+        End If
+    Loop
+    
+End Function
+
 Public Sub goToRegistDataSheet()
 ' データ登録シートへ移動
     Application.ScreenUpdating = False

@@ -128,4 +128,81 @@ Public Function getMasterRecordRowNo(masterName As String) As Long
 
 End Function
 
+Public Function getMasterRecords(masterName As String, key As Variant, keyColumnName As String) As Range
+' 非PKから複数レコードを取得する
+' @param masterName: マスタテーブル名
+' @param key: 取得するレコードキー
+' @param keyColumnName: キーの列名
 
+    ' シートを選択
+    Call selectSheet(masterName)
+    
+    ' キーの列番号
+    Dim keyColumnNo As Long: keyColumnNo = findWholeMatch(getMasterColumnList(masterName), keyColumnName).column
+    
+    ' キーを探索
+    Dim keysColumn As Range: Set keysColumn = _
+        ActiveSheet.Range(Cells(2, keyColumnNo), Cells(2, keyColumnNo).End(xlDown))
+    Dim findKeys As Range: Set findKeys = findAllWholeMatch(keysColumn, key)
+    
+    ' キーが見つからない場合
+    If findKeys Is Nothing Then
+        Set getMasterRecords = Nothing
+        Exit Function
+    End If
+    
+    ' 取得するレコードの行番号
+    Dim recordRowNoList() As Long: ReDim recordRowNoList(findKeys.Count)
+    Dim i As Long, c As Long: c = 0
+    For i = 1 To findKeys.Count
+        recordRowNoList(c) = findKeys(i).Row
+        c = c + 1
+    Next i
+    
+    ' カラム数
+    Dim columnNum As Long: columnNum = getMasterColumnNum(masterName)
+    
+    ' レコードを返す
+    Set getMasterRecords = ActiveSheet.Range(Cells(recordRowNoList(0), 1), Cells(recordRowNoList(0), columnNum))
+    For i = 1 To findKeys.Count - 1
+        Set getMasterRecords = Union(getMasterRecords, _
+            ActiveSheet.Range(Cells(recordRowNoList(i), 1), Cells(recordRowNoList(i), columnNum)))
+    Next i
+
+End Function
+
+Public Function getMasterDatas(masterName As String, key As Variant, keyColumnName As String, column As String) As Range
+' 非PKから複数のレコードの特定のデータを取得
+' @param masterName: マスタテーブル名
+' @param key: 取得するレコードキー
+' @param keyColumnName: キーの列名
+' @param column: 取得するカラム名
+
+    ' 取得するカラムの列番号
+    Dim columnNo As Long: columnNo = findWholeMatch(getMasterColumnList(masterName), column).column
+    ' 取得するレコードリスト
+    Dim records As Range: Set records = getMasterRecords(masterName, key, keyColumnName)
+    
+    Dim i As Long
+    For i = 1 To records.Count
+        If records(i).column = columnNo Then
+            If getMasterDatas Is Nothing Then
+                Set getMasterDatas = records(i)
+            Else
+                Set getMasterDatas = Union(getMasterDatas, records(i))
+            End If
+        End If
+    Next i
+
+End Function
+
+Sub test()
+    
+    Dim hoge As Range: Set hoge = getMasterDatas("KnowledgeMaster", "SSC", "trackKey", "value")
+    Dim i As Long
+    For i = 1 To hoge.Count
+        Debug.Print hoge(i)
+    Next
+    
+    
+End Sub
