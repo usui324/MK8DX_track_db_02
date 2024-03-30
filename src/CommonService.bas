@@ -107,6 +107,8 @@ Public Sub goToDataSheet()
     ' セルの選択
     Range(INIT_SELECT_DATA).Select
     
+    ActiveWindow.ScrollRow = 1
+    
     Application.ScreenUpdating = True
 End Sub
 
@@ -121,6 +123,7 @@ Public Sub goToGraphSheet()
     Application.WindowState = xlMaximized
     ' セルの選択
     Range(INIT_SELECT_GRAPH).Select
+    
 
     Application.ScreenUpdating = True
 End Sub
