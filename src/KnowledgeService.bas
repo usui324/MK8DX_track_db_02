@@ -21,14 +21,16 @@ Public Sub setKnowledge(trackKey As String)
 ' 知識欄のセット
 '
     ' 知識のセット
-    Dim knowledges As Range: Set knowledges = getKnowledgeList(trackKey)
-    If Not knowledges Is Nothing Then
+    Dim knowledges As Variant: knowledges = getKnowledgeList(trackKey)
+    If Not IsEmpty(knowledges) Then
         
         Sheets(REGIST_DATA).Cells(REGIST_ROW_KNOWLEDGE, REGIST_COL_TRACK_NAME) = getTrackNameJp(trackKey)
-      
-        knowledges.Copy
-        Sheets(REGIST_DATA).Cells(REGIST_ROW_KNOWLEDGE, REGIST_COL_KNOWLEDGE).PasteSpecial Paste:=xlPasteValues
-        Application.CutCopyMode = False
+        
+        Dim i As Long
+        For i = 1 To UBound(knowledges)
+            Sheets(REGIST_DATA).Cells(REGIST_ROW_KNOWLEDGE + i - 1, REGIST_COL_KNOWLEDGE) = knowledges(i, 1)
+        Next i
+        
     End If
         
     ' シート選択

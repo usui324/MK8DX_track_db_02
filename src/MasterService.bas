@@ -88,9 +88,9 @@ Public Function getPoint(rankKey As Integer) As Integer
     
 End Function
 
-Public Function getKnowledgeList(trackKey As String) As Range
+Public Function getKnowledgeList(trackKey As String) As Variant
 ' ’mŽ¯‚ðŽæ“¾‚·‚é
 '
-    Set getKnowledgeList = getMasterDatas(KNOWLEDGE_MASTER, trackKey, "trackKey", "value")
+    getKnowledgeList = getDatas(KNOWLEDGE_MASTER, trackKey, "trackKey", "value")
     
 End Function

@@ -1,202 +1,252 @@
 Attribute VB_Name = "MasterUtils"
 Option Explicit
-
-' マスタ関連サービスクラス
-' マスタ制約
-' - 1列目がPKであること
-' - PKは一意であること
-' - PKが空文字でないこと
-' - レコードは空行を挟まず定義されていること
+' マスタの制約
+' - 1列目がPrimary Keyであること
+' - PKが非空文字列であること
+' - レコードは空行を挟まないこと
 '
 
-Public Function getMasterRecord(masterName As String, key As Variant) As Range
-' マスタからレコードを取得
-' @param masterName: マスタテーブル名
-' @param key: 取得するレコードキー
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
+Public Function getRecord(tableName As String, pk As String) As Variant
+' PKから取得したレコードを一つ返す
+' @param tableName: テーブル名
+' @param pk: pk
+' @return レコード情報の1×n配列
+'
     ' キーを探索
-    Dim keysColumn As Range: Set keysColumn = ActiveSheet.Range("A2", Range("A2").End(xlDown))
-    Dim findKey As Range: Set findKey = findWholeMatch(keysColumn, key)
-    
-    ' キーが見つからない場合
-    If findKey Is Nothing Then
-        Set getMasterRecord = Nothing
-        Exit Function
-    End If
-    
-    ' 取得するレコードの行番号
-    Dim recordRowNo As Long: recordRowNo = findKey.Row
-    ' カラム数
-    Dim columnNum As Long: columnNum = getMasterColumnNum(masterName)
-    
-    ' レコードを返す
-    Set getMasterRecord = ActiveSheet.Range(Cells(recordRowNo, 1), Cells(recordRowNo, columnNum))
-
-End Function
-
-Public Function getMasterColumn(masterName As String, column As String) As Range
-' マスタからカラムを取得
-' @param masterName: マスタテーブル名
-' @param key: 取得するカラム名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' カラムを探索
-    Dim columnList As Range: Set columnList = getMasterColumnList(masterName)
-    Dim findColumn As Range: Set findColumn = findWholeMatch(columnList, column)
-    
-    ' カラムが見つからない場合
-    If findColumn Is Nothing Then
-        Debug.Print column; masterName
-        Set getMasterColumn = Nothing
-    End If
-        
-    ' 取得するカラムの列番号
-    Dim columnNo As Long: columnNo = findColumn.column
-    ' レコード数
-    Dim recordNum As Long: recordNum = getMasterRecordRowNo(masterName)
-    
-    ' 各レコードの取得カラムを返す
-    Set getMasterColumn = ActiveSheet.Range(Cells(2, columnNo), Cells(recordNum, columnNo))
-
-End Function
-
-Function getMasterData(masterName As String, key As String, column As String) As Range
-' マスタからレコードの特定のデータを取得
-' @param masterName: マスタテーブル名
-' @param key: 取得するレコードキー
-' @param column: 取得するカラム名
-
-    ' 取得するカラムの列番号
-    Dim columnNo As Long: columnNo = findWholeMatch(getMasterColumnList(masterName), column).column
-    ' 取得するレコードの行番号
-    Dim rowNo As Long: rowNo = getMasterRecord(masterName, key).Row
-
-    Set getMasterData = Cells(rowNo, columnNo)
-    
-End Function
-
-Public Function getMasterColumnList(masterName As String) As Range
-' マスタのカラム名リストを取得
-' @param masterName: マスタテーブル名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' カラムリストを返す
-    Set getMasterColumnList = ActiveSheet.Range("A1", Range("A1").End(xlToRight))
-
-End Function
-
-Public Function getMasterKeyList(masterName As String) As Range
-' マスタのキーリストを取得
-' @param masterName: マスタテーブル名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' キーリストを返す
-    Set getMasterKeyList = ActiveSheet.Range("A1", Range("A1").End(xlDown))
-
-End Function
-
-Public Function getMasterColumnNum(masterName As String) As Long
-' マスタのカラム数を取得
-' @param masterName: マスタテーブル名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' カラム数を返す
-     getMasterColumnNum = ActiveSheet.Range("A1").End(xlToRight).column
-
-End Function
-
-Public Function getMasterRecordRowNo(masterName As String) As Long
-' マスタの最終レコードの行番号を返す
-' @param masterName: マスタテーブル名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' 最終キーの行番号を返す
-    getMasterRecordRowNo = ActiveSheet.Range("A1").End(xlDown).Row
-
-End Function
-
-Public Function getMasterRecords(masterName As String, key As Variant, keyColumnName As String) As Range
-' 非PKから複数レコードを取得する
-' @param masterName: マスタテーブル名
-' @param key: 取得するレコードキー
-' @param keyColumnName: キーの列名
-
-    ' シートを選択
-    Call selectSheet(masterName)
-    
-    ' キーの列番号
-    Dim keyColumnNo As Long: keyColumnNo = findWholeMatch(getMasterColumnList(masterName), keyColumnName).column
-    
-    ' キーを探索
-    Dim keysColumn As Range: Set keysColumn = _
-        ActiveSheet.Range(Cells(2, keyColumnNo), Cells(2, keyColumnNo).End(xlDown))
-    Dim findKeys As Range: Set findKeys = findAllWholeMatch(keysColumn, key)
-    
-    ' キーが見つからない場合
-    If findKeys Is Nothing Then
-        Set getMasterRecords = Nothing
-        Exit Function
-    End If
-    
-    ' 取得するレコードの行番号
-    Dim recordRowNoList() As Long: ReDim recordRowNoList(findKeys.Count)
-    Dim i As Long, c As Long: c = 0
-    For i = 1 To findKeys.Count
-        recordRowNoList(c) = findKeys(i).Row
-        c = c + 1
-    Next i
-    
-    ' カラム数
-    Dim columnNum As Long: columnNum = getMasterColumnNum(masterName)
-    
-    ' レコードを返す
-    Set getMasterRecords = ActiveSheet.Range(Cells(recordRowNoList(0), 1), Cells(recordRowNoList(0), columnNum))
-    For i = 1 To findKeys.Count - 1
-        Set getMasterRecords = Union(getMasterRecords, _
-            ActiveSheet.Range(Cells(recordRowNoList(i), 1), Cells(recordRowNoList(i), columnNum)))
-    Next i
-
-End Function
-
-Public Function getMasterDatas(masterName As String, key As Variant, keyColumnName As String, column As String) As Range
-' 非PKから複数のレコードの特定のデータを取得
-' @param masterName: マスタテーブル名
-' @param key: 取得するレコードキー
-' @param keyColumnName: キーの列名
-' @param column: 取得するカラム名
-
-    ' 取得するカラムの列番号
-    Dim columnNo As Long: columnNo = findWholeMatch(getMasterColumnList(masterName), column).column
-    ' 取得するレコードリスト
-    Dim records As Range: Set records = getMasterRecords(masterName, key, keyColumnName)
-    
-    If records Is Nothing Then
-        Set getMasterDatas = Nothing
-        Exit Function
-    End If
-    
+    Dim keyList As Variant: keyList = getRecordKeyList(tableName)
+    Dim rowNo As Long: rowNo = 0
     Dim i As Long
-    For i = 1 To records.Count
-        If records(i).column = columnNo Then
-            If getMasterDatas Is Nothing Then
-                Set getMasterDatas = records(i)
-            Else
-                Set getMasterDatas = Union(getMasterDatas, records(i))
-            End If
+    For i = 1 To getRecordNum(tableName)
+        If keyList(i, 1) = pk Then
+            rowNo = i + 1
+            Exit For
         End If
     Next i
+    
+    ' キーが見つからない場合
+    If rowNo = 0 Then
+        getRecord = Empty
+        Exit Function
+    End If
+    
+    ' カラム数
+    Dim columnNum As Long: columnNum = getColumnNum(tableName)
+    
+    ' レコードを返す
+    getRecord = Sheets(tableName).Range(Sheets(tableName).Cells(rowNo, 1), Sheets(tableName).Cells(rowNo, columnNum)).Value
 
 End Function
+
+Public Function getRecords(tableName As String, key As String, keyColumnName As String) As Variant
+' キーから取得した1つ以上のレコードを返す
+' @param tableName: テーブル名
+' @param key: キー
+' @param keyColumnName: キーのカラム名
+' @return レコード情報のm×n配列
+'
+    Dim i As Long
+    Dim j As Long
+    
+    ' キーを探索するカラムを取得
+    Dim keyList As Variant: keyList = getColumn(tableName, keyColumnName)
+    
+    ' カラムが見つからない場合
+    If IsEmpty(keyList) Then
+        getRecords = Empty
+        Exit Function
+    End If
+    
+    ' レコード数を取得
+    Dim recordNum As Long: recordNum = getRecordNum(tableName)
+    
+    ' 該当するレコード数
+    Dim targetRecordNum As Long: targetRecordNum = 0
+    ' 該当するレコードのインデックスリスト
+    Dim targetIndexList As Variant
+    ReDim targetIndexList(recordNum, 1)
+    For i = 1 To recordNum
+        If keyList(i, 1) = key Then
+            targetRecordNum = targetRecordNum + 1
+            targetIndexList(targetRecordNum, 1) = i
+        End If
+    Next i
+    
+    ' レコードが見つからない場合
+    If targetRecordNum = 0 Then
+        getRecords = Empty
+        Exit Function
+    End If
+    
+    ' 格納用Variant配列を作成
+    Dim targetRecords As Variant
+    ReDim targetRecords(1 To targetRecordNum, 1 To getColumnNum(tableName))
+    
+    ' テーブルを取得
+    Dim table As Variant: table = getTable(tableName)
+    
+    For i = 1 To targetRecordNum
+        For j = 1 To getColumnNum(tableName)
+            targetRecords(i, j) = table(targetIndexList(i, 1), j)
+        Next j
+    Next i
+    
+    getRecords = targetRecords
+
+End Function
+
+Public Function getColumn(tableName As String, columnName As String) As Variant
+' カラム名から取得したカラムを一列返す
+' @param tableName: テーブル名
+' @param columnName: カラム名
+' @return カラム情報のn×1配列
+'
+    ' カラム名のリストを取得
+    Dim columnNameLIst As Variant: columnNameLIst = getColumnList(tableName)
+    ' カラム名を探索
+    Dim columnNo As Long: columnNo = 0
+    Dim i As Long
+    For i = 1 To getColumnNum(tableName)
+        If columnNameLIst(1, i) = columnName Then
+            columnNo = i
+            Exit For
+        End If
+    Next i
+    
+    ' 見つからない場合
+    If columnNo = 0 Then
+        getColumn = Empty
+        Exit Function
+    End If
+    
+    ' レコード数を取得
+    Dim recordNum As Long: recordNum = getRecordNum(tableName)
+    
+    ' カラムを返す
+    getColumn = Sheets(tableName).Range(Sheets(tableName).Cells(2, columnNo), Sheets(tableName).Cells(recordNum + 1, columnNo)).Value
+
+End Function
+
+Public Function getData(tableName As String, pk As String, columnName As String) As Variant
+' 特定レコードの特定のカラムを取得
+' @param tableName: テーブル名
+' @param pk: pk
+' @param columnName: カラム名
+' @return 取得データの1×1配列
+'
+    ' レコードを取得
+    Dim record As Variant: record = getRecord(tableName, pk)
+    ' レコードが見つからない場合
+    If IsEmpty(record) Then
+        getData = Empty
+        Exit Function
+    End If
+    
+    ' カラム一覧を取得
+    Dim columnList As Variant: columnList = getColumnList(tableName)
+    ' カラム名を探索
+    Dim columnNo As Long: columnNo = 0
+    Dim i As Long
+    For i = 1 To getColumnNum(tableName)
+        If columnList(1, i) = columnName Then
+            columnNo = i
+            Exit For
+        End If
+    Next i
+    ' カラムが見つからない場合
+    If columnNo = 0 Then
+        getData = Empty
+        Exit Function
+    End If
+    
+    ' 特定のデータを返す
+    getData = record(1, i)
+
+End Function
+
+Public Function getDatas(tableName As String, key As String, keyColumnName As String, targetColumnName) As Variant
+' キーから取得した1つ以上のレコードの特定のカラムを返す
+' @param tableName: テーブル名
+' @param key: キー
+' @param keyColumnName: キーのカラム名
+' @param targetColumnName: 取得するカラム名
+' @return 取得データのn×1配列
+'
+    ' レコードを取得
+    Dim records As Variant: records = getRecords(tableName, key, keyColumnName)
+    ' レコードが見つからない場合
+    If IsEmpty(records) Then
+        getDatas = Empty
+        Exit Function
+    End If
+    
+    ' カラム一覧を取得
+    Dim columnList As Variant: columnList = getColumnList(tableName)
+    ' カラム名を探索
+    Dim columnNo As Long: columnNo = 0
+    Dim i As Long
+    For i = 1 To getColumnNum(tableName)
+        If columnList(1, i) = targetColumnName Then
+            columnNo = i
+            Exit For
+        End If
+    Next i
+    ' カラムが見つからない場合
+    If columnNo = 0 Then
+        getDatas = Empty
+        Exit Function
+    End If
+    
+    ' 特定のデータを返す
+    Dim targetDatas As Variant
+    ReDim targetDatas(1 To UBound(records, 1), 1 To 1)
+    For i = 1 To UBound(targetDatas, 1)
+        targetDatas(i, 1) = records(i, columnNo)
+    Next i
+    
+    getDatas = targetDatas
+
+End Function
+Public Function getColumnNum(tableName As String) As Long
+' 指定したテーブルのカラム数を取得
+' @param tableName: テーブル名
+'
+    getColumnNum = Sheets(tableName).Range("A1").End(xlToRight).column
+
+End Function
+
+Public Function getRecordNum(tableName As String) As Long
+' 指定したテーブルのレコード数を取得
+' @param tableName: テーブル名
+'
+    getRecordNum = Sheets(tableName).Range("A1").End(xlDown).Row - 1
+
+End Function
+
+Public Function getColumnList(tableName As String) As Variant
+' 指定したテーブルのカラム名のリストを取得
+' @param tableName: テーブル名
+' @return カラム名を格納した1×nの二次元配列
+'
+    getColumnList = Sheets(tableName).Range(Sheets(tableName).Range("A1"), Sheets(tableName).Range("A1").End(xlToRight)).Value
+
+End Function
+
+Public Function getRecordKeyList(tableName As String) As Variant
+' 指定したテーブルのpkのリストを取得
+' @param tableName: テーブル名
+' @return pkを格納したn×1の二次元配列
+'
+    getRecordKeyList = Sheets(tableName).Range(Sheets(tableName).Range("A2"), Sheets(tableName).Range("A1").End(xlDown)).Value
+
+End Function
+
+Public Function getTable(tableName As String) As Variant
+' 指定したテーブルを取得
+' @paran tableName: テーブル名
+' @return テーブルの全レコード
+'
+    getTable = Sheets(tableName).Range(Sheets(tableName).Range("A2"), Sheets(tableName).Range("A2").End(xlToRight).End(xlDown)).Value
+
+End Function
+
+
