@@ -5,6 +5,8 @@ Attribute VB_Name = "ResistDataService"
 Public Sub initInputData()
 ' データ入力欄の初期化
 '
+    Application.ScreenUpdating = False
+    
     ' tier欄の初期化
     initInputTier
     ' 形式欄の初期化
@@ -22,6 +24,9 @@ Public Sub initInputData()
     ' 知識の消去
     initKnowledge
     
+    Range(INIT_SELECT_REGIST_DATA).Select
+    
+    Application.ScreenUpdating = True
     
 End Sub
 
@@ -33,7 +38,6 @@ Private Sub initInputTier()
     
     Sheets(REGIST_DATA).Cells(REGIST_ROW_TIER, REGIST_COL_TIER).Value = initValue
     
-    Range(INIT_SELECT_REGIST_DATA).Select
 End Sub
 
 Private Sub initInputFormat()
@@ -44,7 +48,6 @@ Private Sub initInputFormat()
     
     Sheets(REGIST_DATA).Cells(REGIST_ROW_FORMAT, REGIST_COL_FORMAT).Value = initValue
     
-    Range(INIT_SELECT_REGIST_DATA).Select
 End Sub
 
 Private Sub initInputTrackName()
@@ -61,8 +64,6 @@ Private Sub initInputTrackName()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_TRACK_NAME).Value = initValue
     Next i
     
-    Range(INIT_SELECT_REGIST_DATA).Select
-    
 End Sub
 
 Private Sub initInputStartingRank()
@@ -74,8 +75,6 @@ Private Sub initInputStartingRank()
     For i = 1 To RACE_NUM
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_START_RANK).Value = ""
     Next i
-    
-    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
 
@@ -89,8 +88,6 @@ Private Sub initInputRank()
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_RANK).Value = ""
     Next i
     
-    Range(INIT_SELECT_REGIST_DATA).Select
-    
 End Sub
     
 Private Sub initInputRemark()
@@ -102,8 +99,6 @@ Private Sub initInputRemark()
     For i = 1 To RACE_NUM
         Cells(REGIST_ROW_HEADER + i, REGIST_COL_REMARK).Value = ""
     Next i
-    
-    Range(INIT_SELECT_REGIST_DATA).Select
     
 End Sub
 
